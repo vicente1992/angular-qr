@@ -1,4 +1,4 @@
-<div class="row pt-5">
+<div class="row pt-5 animated fadeIn fast">
   <div class="col-md-6 text-center pt-5">
     <h1 class="text-center">Genera tu código qr</h1>
     <input
@@ -16,7 +16,7 @@
       Generar QR
     </button>
   </div>
-  <div class="col-md-6 text-center" *ngIf="data">
+  <div class="col-md-6 text-center animated fadeIn fast" *ngIf="data">
     <div class="codigo-qr">
       <img class="image" [src]="data" alt="" />
     </div>
