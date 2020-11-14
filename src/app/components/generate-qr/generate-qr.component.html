@@ -1,0 +1,31 @@
+<div class="row pt-5">
+  <div class="col-md-6 text-center pt-5">
+    <h1 class="text-center">Genera tu código qr</h1>
+    <input
+      type="text"
+      class="form-control mt-3"
+      placeholder="Por favor ingresa un dirección url"
+      #url
+    />
+    <br />
+    <button
+      type="button"
+      class="btn btn-primary btn-block mb-4"
+      (click)="generateQr(url.value)"
+    >
+      Generar QR
+    </button>
+  </div>
+  <div class="col-md-6 text-center" *ngIf="data">
+    <div class="codigo-qr">
+      <img class="image" [src]="data" alt="" />
+    </div>
+    <button
+      type="button"
+      class="btn btn-primary mt-4"
+      (click)="downloadQr(data)"
+    >
+      Descargar QR
+    </button>
+  </div>
+</div>
